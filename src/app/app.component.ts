@@ -37,6 +37,7 @@ export class AppComponent {
     return await audioContext.audioWorklet.addModule(workletFileName).then(() => {
       this.audioworkletNode = new AudioWorkletNode(audioContext, 'worklet-processor');
       this.audioworkletNode.port.onmessage = (event) => {
+        console.log("event", event.data.inputBuffer);
         const bar = document.getElementById('bar');
         bar.style.width = AppComponent.average(event.data.inputBuffer) * 1000 + 'px';
       };
