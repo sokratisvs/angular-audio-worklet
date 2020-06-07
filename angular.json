@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-audio-worklet"
+    }
+  },
+  "defaultProject": "angular-audio-worklet",
+  "cli": {
+    "analytics": "217b2c20-edba-41f5-9cdf-51e5cd60a4bb"
+  }
 }
